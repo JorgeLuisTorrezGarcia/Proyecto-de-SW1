@@ -1,23 +1,23 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use \UniSharp\LaravelFilemanager\Lfm;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\FrontendController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\MessageController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProductReviewController;
-use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\NotificationController;
-use App\Http\Controllers\HomeController;
-use \UniSharp\LaravelFilemanager\Lfm;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProductReviewController;
 
 
 
@@ -28,6 +28,10 @@ Route::get('cache-clear', function () {
     return redirect()->back();
 })->name('cache.clear');
 
+//probador de ropa 
+Route::get('/probador', function () {
+    return view('IA.probador');
+});
 
 // STORAGE LINKED ROUTE
 Route::get('storage-link', [AdminController::class, 'storageLink'])->name('storage.link');

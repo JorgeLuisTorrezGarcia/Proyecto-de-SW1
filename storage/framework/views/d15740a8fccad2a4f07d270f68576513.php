@@ -23,6 +23,9 @@
 
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo e(url('/probador')); ?>">Probador IA</a>
+                            </li>
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -36,19 +39,19 @@
                             <?php if(auth()->guard()->check()): ?>
                                 <?php if(Auth::user()->role == 'admin'): ?>
                                     <li><i class="ti-user"></i> <a href="<?php echo e(route('admin')); ?>"
-                                            target="_blank"><?php echo e(__("Dashboard")); ?></a>
+                                            target="_blank"><?php echo e(__('Dashboard')); ?></a>
                                     </li>
                                 <?php else: ?>
                                     <li><i class="ti-user"></i> <a href="<?php echo e(route('user')); ?>"
-                                            target="_blank"><?php echo e(__("Dashboard")); ?></a>
+                                            target="_blank"><?php echo e(__('Dashboard')); ?></a>
                                     </li>
                                 <?php endif; ?>
                                 <li><i class="ti-power-off"></i> <a
-                                        href="<?php echo e(route('user.logout')); ?>"><?php echo e(__("Logout")); ?></a></li>
+                                        href="<?php echo e(route('user.logout')); ?>"><?php echo e(__('Logout')); ?></a></li>
                             <?php else: ?>
-                                <li><i class="ti-power-off"></i><a href="<?php echo e(route('login.form')); ?>"><?php echo e(__("Login")); ?>
+                                <li><i class="ti-power-off"></i><a href="<?php echo e(route('login.form')); ?>"><?php echo e(__('Login')); ?>
 
-                                        /</a> <a href="<?php echo e(route('register.form')); ?>"><?php echo e(__("Register")); ?></a></li>
+                                        /</a> <a href="<?php echo e(route('register.form')); ?>"><?php echo e(__('Register')); ?></a></li>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -166,7 +169,7 @@
                             <?php if(auth()->guard()->check()): ?>
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span><?php echo e(count(Helper::getAllProductFromCart())); ?> <?php echo e(__("Items")); ?></span>
+                                        <span><?php echo e(count(Helper::getAllProductFromCart())); ?> <?php echo e(__('Items')); ?></span>
                                         <a href="<?php echo e(route('cart')); ?>"><?php echo e(__('View Cart')); ?></a>
                                     </div>
                                     <ul class="shopping-list">
@@ -230,6 +233,9 @@
 
                                             <li class="<?php echo e(Request::path() == 'contact' ? 'active' : ''); ?>"><a
                                                     href="<?php echo e(route('contact')); ?>"><?php echo e(__('Contact Us')); ?></a></li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="<?php echo e(url('/probador')); ?>">Probador IA</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>

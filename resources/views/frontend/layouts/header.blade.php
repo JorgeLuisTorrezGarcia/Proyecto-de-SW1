@@ -21,6 +21,9 @@
                                     {{ $data->email }}
                                 @endforeach
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/probador') }}">Probador IA</a>
+                            </li>
                         </ul>
                     </div>
                     <!--/ End Top Left -->
@@ -34,18 +37,18 @@
                             @auth
                                 @if (Auth::user()->role == 'admin')
                                     <li><i class="ti-user"></i> <a href="{{ route('admin') }}"
-                                            target="_blank">{{ __("Dashboard") }}</a>
+                                            target="_blank">{{ __('Dashboard') }}</a>
                                     </li>
                                 @else
                                     <li><i class="ti-user"></i> <a href="{{ route('user') }}"
-                                            target="_blank">{{ __("Dashboard") }}</a>
+                                            target="_blank">{{ __('Dashboard') }}</a>
                                     </li>
                                 @endif
                                 <li><i class="ti-power-off"></i> <a
-                                        href="{{ route('user.logout') }}">{{ __("Logout") }}</a></li>
+                                        href="{{ route('user.logout') }}">{{ __('Logout') }}</a></li>
                             @else
-                                <li><i class="ti-power-off"></i><a href="{{ route('login.form') }}">{{ __("Login") }}
-                                        /</a> <a href="{{ route('register.form') }}">{{ __("Register") }}</a></li>
+                                <li><i class="ti-power-off"></i><a href="{{ route('login.form') }}">{{ __('Login') }}
+                                        /</a> <a href="{{ route('register.form') }}">{{ __('Register') }}</a></li>
                             @endauth
                         </ul>
                     </div>
@@ -163,7 +166,7 @@
                             @auth
                                 <div class="shopping-item">
                                     <div class="dropdown-cart-header">
-                                        <span>{{ count(Helper::getAllProductFromCart()) }} {{ __("Items") }}</span>
+                                        <span>{{ count(Helper::getAllProductFromCart()) }} {{ __('Items') }}</span>
                                         <a href="{{ route('cart') }}">{{ __('View Cart') }}</a>
                                     </div>
                                     <ul class="shopping-list">
@@ -226,6 +229,9 @@
 
                                             <li class="{{ Request::path() == 'contact' ? 'active' : '' }}"><a
                                                     href="{{ route('contact') }}">{{ __('Contact Us') }}</a></li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ url('/probador') }}">Probador IA</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
