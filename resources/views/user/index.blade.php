@@ -99,17 +99,17 @@
                     <thead>
                         <tr>
                             <th>S.N.</th>
-                            <th>Order No.</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Quantity</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>{{__("Order No")}}.</th>
+                            <th>{{__("Name")}}</th>
+                            <th>{{__("Email")}}</th>
+                            <th>{{__("Quantity")}}</th>
+                            <th>{{__("Total Amount")}}</th>
+                            <th>{{__("Status")}}</th>
+                            <th>{{__("Action")}}</th>
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr>
+                        {{-- <tr>
                             <th>S.N.</th>
                             <th>Order No.</th>
                             <th>Name</th>
@@ -118,7 +118,7 @@
                             <th>Total Amount</th>
                             <th>Status</th>
                             <th>Action</th>
-                        </tr>
+                        </tr> --}}
                     </tfoot>
                     <tbody>
                         @if (count($orders) > 0)

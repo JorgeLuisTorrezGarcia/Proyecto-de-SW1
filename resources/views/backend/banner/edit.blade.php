@@ -1,9 +1,9 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Banner Edit')
+@section('title','E-SHOP || Editar banner')
 @section('main-content')
 
 <div class="card">
-    <h5 class="card-header">Editar baner</h5>
+    <h5 class="card-header">Editar banner</h5>
     <div class="card-body">
       <form method="post" action="{{route('banner.update',$banner->id)}}">
         @csrf 
@@ -70,7 +70,7 @@
 
     $(document).ready(function() {
     $('#description').summernote({
-      placeholder: "Write short description.....",
+      placeholder: "Escribe una breve descripción......",
         tabsize: 2,
         height: 150
     });

@@ -9,7 +9,7 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Comment Lists</h6>
+      <h6 class="m-0 font-weight-bold text-primary float-left">{{__("Comment Lists")}}</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,16 +18,16 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Author</th>
-              <th>Post Title</th>
-              <th>Message</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>{{__("Author")}}</th>
+              <th>{{__("Post Title")}}</th>
+              <th>{{__("Message")}}</th>
+              <th>{{__("Date")}}</th>
+              <th>{{__("Status")}}</th>
+              <th>{{__("Action")}}</th>
             </tr>
           </thead>
           <tfoot>
-            <tr>
+            {{-- <tr>
               <th>S.N.</th>
               <th>Author</th>
               <th>Post Title</th>
@@ -35,7 +35,7 @@
               <th>Date</th>
               <th>Status</th>
               <th>Action</th>
-            </tr>
+            </tr> --}}
           </tfoot>
           <tbody>
             @foreach($comments as $comment)
@@ -66,7 +66,7 @@
         </table>
         <span style="float:right">{{$comments->links()}}</span>
         @else
-          <h6 class="text-center">No post comments found!!!</h6>
+          <h6 class="text-center">¡No se encontraron comentarios de publicaciones!</h6>
         @endif
       </div>
     </div>
@@ -122,8 +122,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: {{__("Are you sure?")}},
+                    text: {{__("Once deleted, you will not be able to recover this data!")}},
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -132,7 +132,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal({{__("Your data is safe!")}});
                     }
                 });
           })

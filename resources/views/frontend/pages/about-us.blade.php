@@ -11,8 +11,8 @@
                 <div class="col-12">
                     <div class="bread-inner">
                         <ul class="bread-list">
-                            <li><a href="index1.html"> {{ __('Home') }} <i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="blog-single.html"> {{ __('About Us') }} </a></li>
+                            <li><a href="{{ route('home') }}"> {{ __('Home') }} <i class="ti-arrow-right"></i></a></li>
+                            <li class="active"><a href="#"> {{ __('About Us') }} </a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                         @php
                             $settings = DB::table('settings')->get();
                         @endphp
-                        <h3> {{ __('Welcome To') }} <span>Eshop</span></h3>
+                        <h3> {{ __('Welcome to') }} <span>Eshop</span></h3>
                         <p>
                             @foreach ($settings as $data)
                                 {{ $data->description }}
@@ -66,7 +66,7 @@
                     <div class="single-service">
                         <i class="ti-rocket"></i>
                         <h4> {{ __('Free shiping') }} </h4>
-                        <p> {{ __('Orders over $100') }} </p>
+                        <p> {{ __('Orders over ') }}$100 </p>
                     </div>
                     <!-- End Single Service -->
                 </div>

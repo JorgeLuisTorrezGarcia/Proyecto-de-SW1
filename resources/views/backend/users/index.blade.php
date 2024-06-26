@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Users List</h6>
-      <a href="{{route('users.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add User</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">{{__("Users List")}}</h6>
+      <a href="{{route('users.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> {{__("Add User")}}</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,17 +18,17 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Photo</th>
-              <th>Join Date</th>
-              <th>Role</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>{{__("Name")}}</th>
+              <th>{{__("Email")}}</th>
+              <th>{{__("Photo")}}</th>
+              <th>{{__("Join Date")}}</th>
+              <th>{{__("Role")}}</th>
+              <th>{{__("Status")}}</th>
+              <th>{{__("Action")}}</th>
             </tr>
           </thead>
           <tfoot>
-            <tr>
+            {{-- <tr>
                 <th>S.N.</th>
                 <th>Name</th>
                 <th>Email</th>
@@ -37,7 +37,7 @@
                 <th>Role</th>
                 <th>Status</th>
                 <th>Action</th>
-              </tr>
+              </tr> --}}
           </tfoot>
           <tbody>
             @foreach($users as $user)   
@@ -148,8 +148,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Estas seguro?",
+                    text: "¡Una vez eliminados, no podrás recuperar estos datos!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -158,7 +158,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("¡Tus datos están seguros!");
                     }
                 });
           })

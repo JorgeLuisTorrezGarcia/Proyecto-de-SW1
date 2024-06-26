@@ -9,7 +9,7 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Order Lists</h6>
+      <h6 class="m-0 font-weight-bold text-primary float-left">{{__("Order Lists")}}</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -18,18 +18,18 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Order No.</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Quantity</th>
-              <th>Charge</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>{{__("Order No")}}.</th>
+              <th>{{__("Name")}}</th>
+              <th>{{__("Email")}}</th>
+              <th>{{__("Quantity")}}</th>
+              <th>{{__("Charge")}}</th>
+              <th>{{__("Total Amount")}}</th>
+              <th>{{__("Status")}}</th>
+              <th>{{__("Action")}}</th>
             </tr>
           </thead>
           <tfoot>
-            <tr>
+            {{-- <tr>
               <th>S.N.</th>
               <th>Order No.</th>
               <th>Name</th>
@@ -39,7 +39,7 @@
               <th>Total Amount</th>
               <th>Status</th>
               <th>Action</th>
-              </tr>
+              </tr> --}}
           </tfoot>
           <tbody>
             @foreach($orders as $order)  
@@ -80,7 +80,7 @@
         </table>
         <span style="float:right">{{$orders->links()}}</span>
         @else
-          <h6 class="text-center">No orders found!!! Please order some products</h6>
+          <h6 class="text-center">¡¡¡No se encontraron pedidos!!! Por favor ordene algunos productos</h6>
         @endif
       </div>
     </div>
@@ -136,8 +136,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Estas seguro?",
+                    text: "¡Una vez eliminados, no podrás recuperar estos datos!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -146,7 +146,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("¡Tus datos están seguros!");
                     }
                 });
           })

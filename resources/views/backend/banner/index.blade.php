@@ -1,5 +1,5 @@
 @extends('backend.layouts.master')
-@section('title','E-SHOP || Banner Page')
+@section('title','E-SHOP || Banner')
 @section('main-content')
  <!-- DataTales Example -->
  <div class="card shadow mb-4">
@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Banners List</h6>
-      <a href="{{route('banner.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Banner</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">{{__("Banners List")}}</h6>
+      <a href="{{route('banner.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> {{__("Add Banner")}}</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -19,22 +19,22 @@
           <thead>
             <tr>
               <th>S.N.</th>
-              <th>Title</th>
-              <th>Slug</th>
-              <th>Photo</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>{{__("Title")}}</th>
+              <th>{{__("Slug")}}</th>
+              <th>{{__("Photo")}}</th>
+              <th>{{__("Status")}}</th>
+              <th>{{__("Action")}}</th>
             </tr>
           </thead>
           <tfoot>
-            <tr>
+            {{-- <tr>
               <th>S.N.</th>
               <th>Title</th>
               <th>Slug</th>
               <th>Photo</th>
               <th>Status</th>
               <th>Action</th>
-              </tr>
+              </tr> --}}
           </tfoot>
           <tbody>
             @foreach($banners as $banner)   
@@ -90,7 +90,7 @@
         </table>
         <span style="float:right">{{$banners->links()}}</span>
         @else
-          <h6 class="text-center">No banners found!!! Please create banner</h6>
+          <h6 class="text-center">¡¡¡No se encontraron banners!!! Por favor crea un banner</h6>
         @endif
       </div>
     </div>
@@ -153,8 +153,8 @@
               // alert(dataID);
               e.preventDefault();
               swal({
-                    title: "Are you sure?",
-                    text: "Once deleted, you will not be able to recover this data!",
+                    title: "Estas seguro?",
+                    text: "¡Una vez eliminados, no podrás recuperar estos datos!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -163,7 +163,7 @@
                     if (willDelete) {
                        form.submit();
                     } else {
-                        swal("Your data is safe!");
+                        swal("¡Tus datos están seguros!");
                     }
                 });
           })

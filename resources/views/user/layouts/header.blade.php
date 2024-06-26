@@ -2,7 +2,7 @@
 
     <!-- Sidebar Toggle (Topbar) -->
     <button id="sidebarToggleTop" class="btn btn-link  rounded-circle mr-3">
-      <i class="fa fa-bars">header-sidebar toggle</i>
+      <i class="fa fa-bars"></i>
     </button>
 
     <!-- Topbar Search -->

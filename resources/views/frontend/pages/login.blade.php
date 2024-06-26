@@ -26,8 +26,7 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-12">
                     <div class="login-form">
-                        <h2>Login</h2>
-                        <p> {{ __('Please register in order to checkout more quickly') }} </p>
+                        <h2>{{__("Login")}}</h2>
                         <!-- Form -->
                         <form class="form" method="post" action="{{ route('login.submit') }}">
                             @csrf
@@ -57,10 +56,10 @@
                                         <button class="btn" type="submit"> {{ __('Login') }} </button>
                                         <a href="{{ route('register.form') }}" class="btn"> {{ __('Register') }} </a>
                                         {{ __('OR') }}
-                                        <a href="{{ route('login.redirect', 'facebook') }}" class="btn btn-facebook"><i
-                                                class="ti-facebook"></i></a>
-                                        <a href="{{ route('login.redirect', 'github') }}" class="btn btn-github"><i
-                                                class="ti-github"></i></a>
+                                        {{-- <a href="{{ route('login.redirect', 'facebook') }}" class="btn btn-facebook"><i
+                                                class="ti-facebook"></i></a> --}}
+                                        {{-- <a href="{{ route('login.redirect', 'github') }}" class="btn btn-github"><i
+                                                class="ti-github"></i></a> --}}
                                         <a href="{{ route('login.redirect', 'google') }}" class="btn btn-google"><i
                                                 class="ti-google"></i></a>
 
